@@ -258,6 +258,14 @@ a {
   color: var(--muted);
 }
 
+.hero-tagline {
+  margin: 1rem 0 0;
+  color: var(--accent-strong);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
 .hero-actions {
   display: flex;
   align-items: center;
@@ -457,6 +465,55 @@ a {
   opacity: 0.86;
 }
 
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.price-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.6rem;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 244, 0.98), rgba(237, 226, 214, 0.82)),
+    linear-gradient(90deg, rgba(201, 107, 52, 0.05), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  box-shadow: var(--shadow);
+}
+
+.price-card h4 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.price-card.feature {
+  background:
+    linear-gradient(160deg, #161616, #2a211b 58%, #c79a2b 100%);
+  color: #f8fafc;
+}
+
+.price {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.price-card.feature .price {
+  color: #fff4e8;
+}
+
+.price-card span {
+  line-height: 1.7;
+  color: inherit;
+  opacity: 0.86;
+}
+
 .service-step {
   display: inline-block;
   font-weight: 800;
@@ -552,6 +609,14 @@ a {
   line-height: 1.7;
   border-top: 1px solid var(--line);
   padding-top: 1rem;
+}
+
+.map-container {
+  margin-top: 1.2rem;
+  overflow: hidden;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.44);
 }
 
 .social-card {
@@ -711,6 +776,69 @@ a {
   width: min(1080px, 100%);
   padding: 1.4rem;
   background: linear-gradient(180deg, rgba(255, 250, 244, 0.98), rgba(234, 223, 206, 0.96));
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .hero-visual {
+    margin-top: 20px;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .topnav {
+    flex-wrap: wrap;
+  }
+
+  .button,
+  .button-small {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .gallery-rail {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .gallery-card {
+    min-width: 85%;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .brand-lockup {
+    justify-self: start;
+  }
+
+  .hero-cluster {
+    min-height: 520px;
+  }
+
+  .hero-image-card {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .booking-layout,
+  .details,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .booking-dialog-header {
